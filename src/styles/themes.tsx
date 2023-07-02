@@ -34,6 +34,7 @@ const defaultTheme = {
   color: {
     accent: "#a4ffaf",
     background: {
+      gradient: "linear-gradient(#14131b, #08070b)",
       primary: "#24232c",
       secondary: "#18171f",
     },
