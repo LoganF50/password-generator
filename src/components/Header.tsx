@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  padding: ${({ theme }) => theme.spacing.base500};
   text-align: center;
 
   h1 {

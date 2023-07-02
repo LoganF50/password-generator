@@ -42,6 +42,17 @@ const defaultTheme = {
       primary: "#e6e5ea",
       secondary: "#817d92",
     },
+    slider: {
+      background: {
+        empty: "#18171f",
+        full: "linear-gradient(#a4ffaf, #a4ffaf)",
+      },
+      thumb: {
+        background: "#e6e5ea",
+        hover: "#18171f",
+        accent: "#a4ffaf",
+      },
+    },
     states: {
       orange: "#fb7c58",
       red: "#f64a4a",
