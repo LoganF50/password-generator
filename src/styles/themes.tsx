@@ -31,13 +31,30 @@ const defaultTheme = {
     laptopLg: "1440px",
     desktop: "2560px",
   },
-  color: {},
+  color: {
+    accent: "#a4ffaf",
+    background: {
+      primary: "#24232c",
+      secondary: "#18171f",
+    },
+    text: {
+      primary: "#e6e5ea",
+      secondary: "#817d92",
+    },
+    states: {
+      orange: "#fb7c58",
+      red: "#f64a4a",
+      yellow: "#f8cd65",
+    },
+  },
   duration: {
     short: "250ms",
     medium: "375ms",
     long: "500ms",
   },
-  fontFamily: {},
+  fontFamily: {
+    primary: "'JetBrains Mono', monospace",
+  },
   fontSize: {
     base100: "0.75rem",
     base200: "0.875rem",
@@ -51,15 +68,7 @@ const defaultTheme = {
     base1000: "6rem",
   },
   fontWeight: {
-    thin: "100",
-    extraLight: "200",
-    light: "300",
-    normal: "400",
-    medium: "500",
-    semiBold: "600",
     bold: "700",
-    extraBold: "800",
-    black: "900",
   },
   spacing: {
     base100: "0.125rem",
@@ -82,22 +91,10 @@ const darkTheme = {
   },
 };
 
-const lightTheme = {
-  name: "light",
-  color: {
-    ...defaultTheme.color,
-  },
-};
-
 export const Themes = {
   dark: {
     ...defaultTheme,
     name: darkTheme.name,
     color: darkTheme.color,
-  },
-  light: {
-    ...defaultTheme,
-    name: lightTheme.name,
-    color: lightTheme.color,
   },
 };

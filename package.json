@@ -1,9 +1,9 @@
 {
-  "name": "template",
+  "name": "password-generator",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://LoganF50.github.io/<repo>/",
+  "homepage": "https://LoganF50.github.io/password-generator/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
