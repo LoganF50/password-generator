@@ -34,7 +34,7 @@ const StyledApp = styled.div`
 `;
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState(Themes.dark);
+  const currentTheme = Themes.dark;
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [isPasswordCopied, setIsPasswordCopied] = useState(false);
 

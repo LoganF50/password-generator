@@ -1,11 +1,12 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { Slider } from "./Slider";
+import { Checkbox } from "./Checkbox";
 
 const StyledPasswordGenerator = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.base500};
+  gap: ${({ theme }) => theme.spacing.base600};
   background-color: ${({ theme }) => theme.color.background.primary};
   font-size: ${({ theme }) => theme.fontSize.base300};
   padding: ${({ theme }) => theme.spacing.base500};
@@ -20,6 +21,13 @@ const FlexRowSplit = styled.div`
 const AccentDiv = styled.div`
   color: ${({ theme }) => theme.color.accent};
   font-size: ${({ theme }) => theme.fontSize.base600};
+`;
+
+const OptionSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.base500};
+  padding: ${({ theme }) => `${theme.spacing.base600} 0`};
 `;
 
 type PasswordGeneratorProps = {
@@ -55,10 +63,28 @@ export const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({
         value={characterLength}
         onChange={(e) => setCharacterLength(Number(e.target.value))}
       />
-      <div>OPTIONS PLACEHOLDER</div>
-      <div>OPTIONS PLACEHOLDER</div>
-      <div>OPTIONS PLACEHOLDER</div>
-      <div>OPTIONS PLACEHOLDER</div>
+      <OptionSection>
+        <Checkbox
+          isChecked={shouldIncludeUppercase}
+          label={"Include Uppercase Letters"}
+          onChange={() => setShouldIncludeUppercase(!shouldIncludeUppercase)}
+        />
+        <Checkbox
+          isChecked={shouldIncludeLowercase}
+          label={"Include Lowercase Letters"}
+          onChange={() => setShouldIncludeLowercase(!shouldIncludeLowercase)}
+        />
+        <Checkbox
+          isChecked={shouldIncludeNumbers}
+          label={"Include Numbers"}
+          onChange={() => setShouldIncludeNumbers(!shouldIncludeNumbers)}
+        />
+        <Checkbox
+          isChecked={shouldIncludeSymbols}
+          label={"Include Symbols"}
+          onChange={() => setShouldIncludeSymbols(!shouldIncludeSymbols)}
+        />
+      </OptionSection>
       <div>STRENGTH PLACEHOLDER</div>
       <button onClick={generatePassword}>Generate</button>
     </StyledPasswordGenerator>

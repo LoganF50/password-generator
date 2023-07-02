@@ -38,9 +38,15 @@ const defaultTheme = {
       primary: "#24232c",
       secondary: "#18171f",
     },
-    text: {
-      primary: "#e6e5ea",
-      secondary: "#817d92",
+    checkbox: {
+      background: {
+        checked: "#a4ffaf",
+        unchecked: "#24232c",
+      },
+      border: {
+        checked: "#a4ffaf",
+        unchecked: "#e6e5ea",
+      },
     },
     slider: {
       background: {
@@ -57,6 +63,10 @@ const defaultTheme = {
       orange: "#fb7c58",
       red: "#f64a4a",
       yellow: "#f8cd65",
+    },
+    text: {
+      primary: "#e6e5ea",
+      secondary: "#817d92",
     },
   },
   duration: {
