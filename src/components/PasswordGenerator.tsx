@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Slider } from "./Slider";
 import { Checkbox } from "./Checkbox";
+import { PasswordStrength } from "./PasswordStrength";
 
 const StyledPasswordGenerator = styled.div`
   display: flex;
@@ -50,6 +51,11 @@ export const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({
     onClick(password);
   };
 
+  //TODO
+  const getStrengthLevel = () => {
+    return 3;
+  };
+
   return (
     <StyledPasswordGenerator>
       <FlexRowSplit>
@@ -85,7 +91,7 @@ export const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({
           onChange={() => setShouldIncludeSymbols(!shouldIncludeSymbols)}
         />
       </OptionSection>
-      <div>STRENGTH PLACEHOLDER</div>
+      <PasswordStrength strengthLevel={getStrengthLevel()} />
       <button onClick={generatePassword}>Generate</button>
     </StyledPasswordGenerator>
   );

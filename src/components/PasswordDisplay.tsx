@@ -31,6 +31,11 @@ const CopyImageContainer = styled.button`
   svg {
     transform: scale(0.8);
   }
+
+  &:hover {
+    cursor: pointer;
+    color: ${({ theme }) => theme.color.text.primary};
+  }
 `;
 
 type PasswordDisplayProps = {
