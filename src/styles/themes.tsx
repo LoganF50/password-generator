@@ -38,6 +38,16 @@ const defaultTheme = {
       primary: "#24232c",
       secondary: "#18171f",
     },
+    button: {
+      background: "#a4ffaf",
+      border: "#a4ffaf",
+      text: "#24232c",
+      hover: {
+        background: "#24232c",
+        border: "#a4ffaf",
+        text: "#a4ffaf",
+      },
+    },
     checkbox: {
       background: {
         checked: "#a4ffaf",

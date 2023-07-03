@@ -38,13 +38,16 @@ function App() {
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [isPasswordCopied, setIsPasswordCopied] = useState(false);
 
-  //TODO add copy to clipboard (wrap everything in conditional based on password length > 0)
   const handleCopyPassword = () => {
-    setIsPasswordCopied(true);
+    if (generatedPassword.length > 0) {
+      setIsPasswordCopied(true);
+      navigator.clipboard.writeText(generatedPassword);
+    }
   };
 
   const updateGeneratedPassword = (password: string) => {
     setGeneratedPassword(password);
+    setIsPasswordCopied(false);
   };
 
   return (

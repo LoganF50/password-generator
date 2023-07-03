@@ -13,12 +13,15 @@ const StyledPasswordDisplay = styled.div`
 
 const StyledPassword = styled.div<{ isEmpty: boolean }>`
   opacity: ${({ isEmpty }) => (isEmpty ? 0.25 : 1)};
+  overflow-x: scroll;
+  overflow-y: hidden;
 `;
 
 const Copied = styled.div`
   color: ${({ theme }) => theme.color.accent};
   font-size: ${({ theme }) => theme.fontSize.base300};
   margin-left: auto;
+  padding-left: ${({ theme }) => theme.spacing.base300};
   text-transform: uppercase;
 `;
 
