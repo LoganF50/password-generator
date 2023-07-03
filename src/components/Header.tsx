@@ -6,6 +6,10 @@ const StyledHeader = styled.header`
   h1 {
     color: ${({ theme }) => theme.color.text.secondary};
     font-size: ${({ theme }) => theme.fontSize.base300};
+
+    @media screen and (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+      font-size: ${({ theme }) => theme.fontSize.base600};
+    }
   }
 `;
 

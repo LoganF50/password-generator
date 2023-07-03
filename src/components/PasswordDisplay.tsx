@@ -9,6 +9,11 @@ const StyledPasswordDisplay = styled.div`
   background-color: ${({ theme }) => theme.color.background.primary};
   font-size: ${({ theme }) => theme.fontSize.base600};
   padding: ${({ theme }) => theme.spacing.base500};
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.base700};
+    padding: ${({ theme }) => theme.spacing.base700};
+  }
 `;
 
 const StyledPassword = styled.div<{ isEmpty: boolean }>`
@@ -33,6 +38,10 @@ const CopyImageContainer = styled.button`
 
   svg {
     transform: scale(0.8);
+
+    @media screen and (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+      transform: none;
+    }
   }
 
   &:hover {

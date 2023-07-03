@@ -9,6 +9,11 @@ const StyledPasswordStrength = styled.div`
   color: ${({ theme }) => theme.color.text.secondary};
   padding: ${({ theme }) => theme.spacing.base500};
   text-transform: uppercase;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    padding: ${({ theme }) =>
+      `${theme.spacing.base600} ${theme.spacing.base700}`};
+  }
 `;
 
 const StrengthContainer = styled.div`
@@ -16,6 +21,11 @@ const StrengthContainer = styled.div`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.base400};
   color: ${({ theme }) => theme.color.text.primary};
+  font-size: ${({ theme }) => theme.fontSize.base400};
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.base600};
+  }
 `;
 
 const RatingContainer = styled.div`

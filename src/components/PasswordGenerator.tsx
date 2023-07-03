@@ -31,6 +31,12 @@ const StyledPasswordGenerator = styled.div`
       cursor: pointer;
     }
   }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.base400};
+    gap: ${({ theme }) => theme.spacing.base700};
+    padding: ${({ theme }) => theme.spacing.base700};
+  }
 `;
 
 const FlexRowSplit = styled.div`
@@ -49,6 +55,11 @@ const OptionSection = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.base500};
   padding: ${({ theme }) => `${theme.spacing.base600} 0`};
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSize.base400};
+    gap: ${({ theme }) => theme.spacing.base600};
+  }
 `;
 
 type PasswordGeneratorProps = {

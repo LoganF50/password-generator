@@ -30,6 +30,8 @@ const StyledApp = styled.div`
   width: min(450px, 100%);
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    gap: ${({ theme }) => theme.spacing.base600};
+    width: min(550px, 100%);
   }
 `;
 
